@@ -1,7 +1,8 @@
 string_agg()需要在postgresql 9.0以上才可以使用<Br>
-隨機產生一組亂數資料
+隨機產生一組亂數資料<BR>
 
-select string_agg(('{a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,1,2,3,4,5,6,7,8,9,0}'::text[])[ceil(random() * 36)], '') FROM generate_series(1, 16);
+範例如下:<br>
+select string_agg(('{a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,1,2,3,4,5,6,7,8,9,0}'::text[])[ceil(random() * 36)], '') FROM generate_series(1, 16);<br>
 <table>
 <tr>
   <td></td>
@@ -14,10 +15,10 @@ select string_agg(('{a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,1,2,3,4
 </table>
 
 
-參數詳解：
-1.string_agg(Column, text )	：將Column內的所有元素，用text做字串連接
-如table名稱為 test_table
-如:select string_agg(random_text,'cc') FROM test_table
+參數詳解：<br>
+1.string_agg(Column, text )	：將Column內的所有元素，用text做字串連接<br>
+如table名稱為 test_table<br>
+如:select string_agg(random_text,'cc') FROM test_table<br>
 <table>
 <tr>
   <td></td>
