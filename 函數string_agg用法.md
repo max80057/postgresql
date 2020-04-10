@@ -1,4 +1,4 @@
-string_agg()需要在postgresql 9.0以上才可以使用
+string_agg()需要在postgresql 9.0以上才可以使用<Br>
 隨機產生一組亂數資料
 
 select string_agg(('{a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,1,2,3,4,5,6,7,8,9,0}'::text[])[ceil(random() * 36)], '') FROM generate_series(1, 16);
