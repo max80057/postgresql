@@ -87,7 +87,7 @@ Result:
   <td>random double precision</td>
 </tr>
 <tr>
-  <td></td>
+  <td>1</td>
   <td>0.866918697487563</td>
 </tr>
 </table>
