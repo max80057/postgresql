@@ -1,0 +1,25 @@
+資料庫簡單備份與還原
+
+su - postgres
+
+單一資料庫備份：
+/usr/bin/pg_dump dbname > outfile 
+(備份資料庫 dbname 至 outfile 這個檔案)
+
+單一資料庫還原：
+/usr/bin/psql dbname < infile 
+(將名為 infile 的備份檔還原到資料庫 dbname)
+
+註1：單一資料庫還原前，需要先創一個資料庫才可還原
+註2：如果是還原至新安裝的postgresql，需要先把user跟role先加入進去才能還原
+
+全資料庫備份：
+/usr/bin/pg_dumpall > outfile
+ (備份至 outfile 這個檔案)
+全資料庫還原：
+/usr/bin/psql -f infile postgres
+ (將 infile 這個備份檔還原到 postgres 這個 cluster。原則上 cluster 皆為 postgres)
+
+
+參考網站:
+http://my.oschina.net/hippora/blog/377253
