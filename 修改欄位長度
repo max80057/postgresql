@@ -1,0 +1,2 @@
+ALTER TABLE table_name ALTER COLUMN column_name TYPE varchar(30);
+ALTER TABLE table名稱   ALTER COLUMN 欄位名稱     資料型態+限制
