@@ -72,8 +72,6 @@ Result:
   <td></td>
   <td>string_agg text</td>
 </tr>
-</table>
-<table>
 <tr>
   <td>1</td>
   <td>4cc4cc1cc2cczcc2ccycc3cc3ccz</td>
