@@ -1,0 +1,29 @@
+本次使用的版本是從官方FTP下載原始碼安裝
+使用的版本為PostgreSQL9.4.4、PostgreSQL8.3.3。
+
+安裝方法同一般安裝相同，但是在設定安裝參數的時候，
+要多一個參數為--with-perl，如下列顯示
+
+./configure --prefix=/usr/local/postgresql-9.x.x/ --disable-integer-datetimes --with-perl 
+
+在下SQL語法的地方執行以下指令
+
+create language plperl;
+
+如此就可以使用Perl語言。(PS1)
+
+
+
+
+
+PS1：如果語言為plperlu的話，則為
+create language plperlu;
+
+
+兩者同為Perl，不相同之處請參考
+http://www.php5.idv.tw/documents/pgsqldoc-7.3tw/plperl-trusted.html
+
+PS2：注意，PostgreSQL版本低的話，Perl很多函數並沒有支援、語法也不太相同。如果在使用圖中發現PostgreSQL顯示與法錯誤或者沒有這個函數，可以嘗試著使用高版本的PostgreSQL來測試。
+
+PS3：各種Perl額外套件下載參考網
+http://search.cpan.org/~gaas/
